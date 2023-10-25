@@ -25,8 +25,8 @@
             Do you have any questions or need assistance? Feel free to reach out to us using the contact information below:
         </p>
         <?php
-	if (file_exists(_DIR_ . '/../api/contacts.txt')) {
-            $lines = file(_DIR_ . '/../api/contacts.txt');
+	if (file_exists(__DIR__ . '/../api/contacts.txt')) {
+            $lines = file(__DIR__ . '/../api/contacts.txt');
             foreach ($lines as $line) {
                 $info = explode(': ', $line);
                 $label = $info[0];

@@ -22,8 +22,8 @@
     <p>Here is the list of current users:</p>
     <ul>
         <?php
-        if (file_exists(_DIR_ . '/../api/currentUsers.txt')) {
-            $lines = file(_DIR_ . '/../api/currentUsers.txt');
+        if (file_exists(__DIR__ . '/../api/currentUsers.txt')) {
+            $lines = file(__DIR__ . '/../api/currentUsers.txt');
             
             foreach ($lines as $line) {
                 echo "<p><strong>$line</strong></p>";
