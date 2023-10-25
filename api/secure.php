@@ -20,7 +20,6 @@ if (isset($_SESSION['is_authenticated']) && $_SESSION['is_authenticated'] === tr
         if ($username === "admin") {
             $secretKey = 'newSecretKey'; // Replace with your secret key
             $validMAC = hash_hmac('sha256', $username, $secretKey); // Example MAC generation
-            echo $validMAC;
             if ($mac === $validMAC) {
                 // Authentication successful
                 $_SESSION['is_authenticated'] = true;
